@@ -2,6 +2,12 @@
 
 A full-stack application that generates cooking recipes from a list of ingredients using Google's Gemini AI.
 
+## Screenshots
+<div align="center">
+  <img src="frontend/Assests/img_1.jpeg" width="45%" alt="Screenshot 1" />
+  &nbsp;
+  <img src="frontend/Assests/img_2.jpeg" width="45%" alt="Screenshot 2" />
+</div>
 ## Tech Stack
 - **Frontend**: React (Vite), Tailwind CSS, Lucide React
 - **Backend**: Python (FastAPI)

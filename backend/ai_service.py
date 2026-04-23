@@ -3,15 +3,17 @@ import json
 import google.generativeai as genai
 from dotenv import load_dotenv
 from prompt_builder import build_recipe_prompt
+from pathlib import Path
 
-load_dotenv()
+env_path = Path(__file__).parent / ".env"
+load_dotenv(dotenv_path=env_path)
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 if GEMINI_API_KEY:
     genai.configure(api_key=GEMINI_API_KEY)
     
-model = genai.GenerativeModel("gemini-1.5-flash")
+model = genai.GenerativeModel("gemini-2.5-flash")
 
 def generate_recipe_from_ai(ingredients: str, cuisine: str = None, diet: str = None) -> dict:
     if not GEMINI_API_KEY:
